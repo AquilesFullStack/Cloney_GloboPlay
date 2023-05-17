@@ -1,0 +1,47 @@
+@use 'variaveis';
+@use 'header';
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Open Sans,Helvetica Neue,sans-serif;
+    list-style: none;
+}
+
+body{
+    background: variaveis.$CorDeFundo;
+}
+
+@mixin title($fontSize:24px){
+     @include text($fontSize)
+}
+
+@mixin text($fontSize:20px){
+    font-size: $fontSize;
+    color: variaveis.$CorTextoPrincipal;
+}
+
+.title--big{
+    @include title(40px)
+}
+
+.title{
+    @include title(30px)    
+}
+
+.text--big{
+    @include text(24px)
+}
+
+.text{
+    @include text;
+}
+
+.text--faq{
+    @include text(16px)
+}
+
+.text--small{
+    @include text(14px)
+}
