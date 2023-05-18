@@ -30,8 +30,15 @@ body{
     @include title(30px)    
 }
 
+.title--secondary{
+    @include text(30px);
+    color: variaveis.$CorTextoSecundario;
+    font-weight: 600
+}
+
 .text--big{
-    @include text(24px)
+    @include text(24px);
+    font-weight:600;
 }
 
 .text{
@@ -44,4 +51,14 @@ body{
 
 .text--small{
     @include text(14px)
+}
+
+
+.button{
+    @include text;
+    background-color: variaveis.$Button;
+    padding: 12px 62px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
 }

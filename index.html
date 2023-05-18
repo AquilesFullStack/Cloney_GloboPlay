@@ -9,35 +9,59 @@
 </head>
 <body>
     <header class="header">
-          <div class="header__nav-icon">
-              <span class="header__nav-icon__span"></span>
-              <span class="header__nav-icon__span"></span>
-              <span class="header__nav-icon__span"></span>
-          </div>
-          <div class="header__nav-menu">
+      <div class="header__hamburguer">
+        <div class="header__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="menu-text text">Menu</div>
+        </div>  
+        <div class="header__nav-menu">
           <ul>
-            <li class="header__nav-menu__item  text--big"><a href="#">Home</a></li>
-            <li class="header__nav-menu__item title--big"><a href="#">Assinatura GloboPlay</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">GloboPlay</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">GloboPlay + Canais ao vivo</a></li>
-            <li class="header__nav-menu__item title--big">
-              <p >Assinaturas Globo</p>
-            </li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Telecine</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Premiere</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Combate</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Cartola Pro</a></li>
-            <li class="header__nav-menu__item title--big">
-              <p>Assinaturas Parceiras</p>
-            </li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Disney+</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Star+</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">LionsGate+</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">FlaTv+</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Discovery+</a></li>
-            <li class="header__nav-menu__item  text--big"><a href="#">Deezer Premium</a></li>
+            <li class="header__nav-menu__item  "><a class="text--big" href="#">Home</a></li>
+            <ul>
+              <li class="header__nav-menu__item "><p class="title--secondary">Assinatura GloboPlay</p></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">GloboPlay</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">GloboPlay + Canais ao vivo</a></li>
+              <li class="header__nav-menu__item">
+            </ul>
+            <ul>
+              <li><p class="title--secondary">Assinaturas Globo</p></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Telecine</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Premiere</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Combate</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Cartola Pro</a></li> 
+            </ul>
+            <ul>
+              <li class="header__nav-menu__item  "><p class="title--secondary">Assinaturas Parceiras</p></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Disney+</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Star+</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">LionsGate+</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">FlaTv+</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Discovery+</a></li>
+              <li class="header__nav-menu__item  "><a class="text--big" href="#">Deezer Premium</a></li>
+            </ul>
           </ul>
-        </div>        
+        </div>
+      </div>
+      <div class="header__vitrine">
+        <h1 class="text--big">vitrine <strong class="title--big">globo</strong></h1>
+      </div>   
+      <div class="header__entrar">
+        <div class="header__entrar__container">
+          <div  class="header__entrar__container__login">
+            <span class="text--big">Entrar</span>
+            <img src="./src/images/imagem-do-usuario-com-fundo-preto.png" alt="icone-usuario">
+            <img src="src/images/simbolo-de-variante-triangular-preto-com-seta-para-baixo.png" alt="seta-para-baixo">
+            <div class="header__entrar__container__login-hover">
+              <p class="text">Acesse sua Conta Globo e descubra os planos recomendados para você!</p>
+              <button class="button">
+                Entrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>     
     </header>
     <script src="dist/js/main.js"></script>
 </body>

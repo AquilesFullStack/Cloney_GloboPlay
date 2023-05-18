@@ -1,6 +1,6 @@
 // JavaScript to handle the toggle functionality
 document.addEventListener('DOMContentLoaded', function () {
-    var navIcon = document.querySelector('.header__nav-icon');
+    var navIcon = document.querySelector('.header__icon');
     var navMenu = document.querySelector('.header__nav-menu');
 
     navIcon.addEventListener('click', function () {

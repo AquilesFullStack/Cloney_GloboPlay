@@ -1,20 +1,82 @@
 @use 'variaveis';
 
 .header{
-    display: inline-block;
 
+    position: relative; //header acompanhar a rolagem da tela
+    top: 0;
+    left: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+     
     
+    &__hamburguer{
+    
+        align-items: center;
+        
+    }
+    &__vitrine{
+        
+        align-items: center;
+        text-align: center;
+    }
 
-    //hamburguer
-    &__nav-icon{
+
+    &__entrar{
+        text-align: right;
+        align-items: center;
+
+        img{
+            align-items: center;
+            margin-left: 12px;
+            height: 32px;
+        }
+
+        &__container{
+
+            &__login{
+                display: block;
+                width: -50%;
+                height: -50%;
+
+                &:hover{
+                    .header__entrar__container__login-hover{
+                    display: block; 
+                    }
+                }
+
+                &-hover{
+                    display: none;
+                    background-color: #fff;
+                    color: #000;
+                    border-radius: 5px;
+                    padding: 5px;
+                    max-width: 150px;
+                    width: 100%;
+                    z-index: 51;
+                    box-shadow: 0 0 5px #ccc;
+                    position: absolute; 
+                }
+            }
+        }
+
+    }
+
+    &__icon{
         cursor: pointer;
         display: inline-block;
         margin: 10px;
         width: 30px;
-        height: 20px;
+        height: 8vh;
         position: relative;
 
-        &__span{
+        .menu-text{
+            display: flex;
+        }
+
+        span{
             background-color: variaveis.$CorTextoPrincipal;
             display: block;
             height: 2px;
@@ -36,23 +98,24 @@
         }
 
         &.active{
-            
+
             span{
 
             &:nth-child(1) {
             transform: translateY(-50%) rotate(-45deg);
             }
-              
+            
             &:nth-child(2) {
                 opacity: 0;
-              }
-              
+            }
+            
             &:nth-child(3) {
                 transform: translateY(-50%) rotate(45deg);
-              }
+            }
             }
         }
-    }    
+    }
+    
 
     &__nav-menu{
         display: none;
@@ -64,15 +127,31 @@
         }
 
         li{
-            margin: 10px;
+            margin: 10px;  
+             
         }
     
         &.active{
             display: block;
+            position: absolute;
+            background: rgba(41,40,40,.9450980392);
+            overflow: hidden;
+            box-shadow: 2px 3px 30px #292828;
+            ul{
+                padding: 16px;
+            }
+
+            li{
+                padding-bottom: 12px;
+                a{
+                    list-style: none;
+                    text-decoration: none;
+                    
+                    &:hover{
+                        color: darkorange;
+                    }
+                }
+            }
         }
-    }
-
-    //hamburguer
-
-
+    }   
 }

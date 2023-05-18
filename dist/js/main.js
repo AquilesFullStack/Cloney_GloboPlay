@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".header__nav-icon"),t=document.querySelector(".header__nav-menu");e.addEventListener("click",function(){e.classList.toggle("active"),t.classList.toggle("active")})});
+document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".header__icon"),t=document.querySelector(".header__nav-menu");e.addEventListener("click",function(){e.classList.toggle("active"),t.classList.toggle("active")})});
