@@ -57,8 +57,10 @@ body{
 .button{
     @include text;
     background-color: variaveis.$Button;
+    width: 64%;
     padding: 12px 62px;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
+    border: none;
 }

@@ -1,157 +1,147 @@
 @use 'variaveis';
 
-.header{
 
-    position: relative; //header acompanhar a rolagem da tela
-    top: 0;
-    left: 0;
+.header{
+    
     padding: 24px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #000;
     z-index: 50;
-     
-    
+
     &__hamburguer{
-    
-        align-items: center;
+
+        &__icon{
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+            width: 30px;
+            height: 8vh;
+            position: relative;
+            
+            span{
+                background-color: variaveis.$CorTextoPrincipal;
+                display: block;
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transition: all 0.3s ease-in-out;
+                
+                &:nth-child(1){
+                    transform: translateY(-6px);
+                }
+                &:nth-child(2){
+                    transform: translateY(-50%);
+                }
+                &:nth-child(3){
+                    transform: translateY(4px);
+                }    
+                
+            }
+            
+            &.active{
+                
+                span{
+                    
+                    &:nth-child(1) {
+                        transform: translateY(-50%) rotate(-45deg);
+                    }
+                
+                &:nth-child(2) {
+                    opacity: 0;
+                    }
+                
+                &:nth-child(3) {
+                    transform: translateY(-50%) rotate(45deg);
+                    }
+                }
+            }
+        }
         
+        &__menu{
+            display: none;
+            
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            li{
+                margin: 10px;  
+                
+            }
+            
+            &.active{
+                display: block;
+                position: absolute;
+                background: rgba(41,40,40,.9450980392);
+                overflow: hidden;
+                box-shadow: 2px 3px 30px #292828;
+                ul{
+                    padding: 16px;
+                }
+                
+                li{
+                    padding-bottom: 12px;
+                    a{
+                        list-style: none;
+                        text-decoration: none;
+                        
+                        &:hover{
+                            color: darkorange;
+                        }
+                    }
+                }
+            }
+        }   
     }
-    &__vitrine{
-        
-        align-items: center;
-        text-align: center;
-    }
 
+    &__entrar{      
+        &:hover .header__entrar__content__login-hover{
+            display: block; 
+            position: absolute;
+            text-align: center; 
+            padding: 16px;  
+            right: 64px;
+            width: 450px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 2px 3px 30px #292828;
 
-    &__entrar{
-        text-align: right;
-        align-items: center;
+            .item{
+                display: block;
+                display: inline-block;
+                color: #000; 
+                font-weight: 600;
+                margin: 24px 0;
+            }
 
-        img{
-            align-items: center;
-            margin-left: 12px;
-            height: 32px;
+            .item-button{
+                margin: 12px 0;
+                width: 92%;
+            }     
+
         }
 
-        &__container{
+        &__content{
 
             &__login{
-                display: block;
-                width: -50%;
-                height: -50%;
+                display: inline-block;
+                align-items: center;
+                justify-content: center;
 
-                &:hover{
-                    .header__entrar__container__login-hover{
-                    display: block; 
-                    }
-                }
-
+                img{
+                    margin-left: 16px;
+                }   
+                
                 &-hover{
-                    display: none;
-                    background-color: #fff;
-                    color: #000;
-                    border-radius: 5px;
-                    padding: 5px;
-                    max-width: 150px;
-                    width: 100%;
-                    z-index: 51;
-                    box-shadow: 0 0 5px #ccc;
-                    position: absolute; 
+                      display: none;
                 }
             }
         }
-
     }
-
-    &__icon{
-        cursor: pointer;
-        display: inline-block;
-        margin: 10px;
-        width: 30px;
-        height: 8vh;
-        position: relative;
-
-        .menu-text{
-            display: flex;
-        }
-
-        span{
-            background-color: variaveis.$CorTextoPrincipal;
-            display: block;
-            height: 2px;
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transition: all 0.3s ease-in-out;
-
-            &:nth-child(1){
-                transform: translateY(-6px);
-            }
-            &:nth-child(2){
-                transform: translateY(-50%);
-            }
-            &:nth-child(3){
-                transform: translateY(4px);
-            }    
-
-        }
-
-        &.active{
-
-            span{
-
-            &:nth-child(1) {
-            transform: translateY(-50%) rotate(-45deg);
-            }
-            
-            &:nth-child(2) {
-                opacity: 0;
-            }
-            
-            &:nth-child(3) {
-                transform: translateY(-50%) rotate(45deg);
-            }
-            }
-        }
-    }
-    
-
-    &__nav-menu{
-        display: none;
-        
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        li{
-            margin: 10px;  
-             
-        }
-    
-        &.active{
-            display: block;
-            position: absolute;
-            background: rgba(41,40,40,.9450980392);
-            overflow: hidden;
-            box-shadow: 2px 3px 30px #292828;
-            ul{
-                padding: 16px;
-            }
-
-            li{
-                padding-bottom: 12px;
-                a{
-                    list-style: none;
-                    text-decoration: none;
-                    
-                    &:hover{
-                        color: darkorange;
-                    }
-                }
-            }
-        }
-    }   
 }
